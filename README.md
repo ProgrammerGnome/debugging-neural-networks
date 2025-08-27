@@ -1,25 +1,24 @@
-# debugging-neural-networks
-Numerical experiments for a better understanding of neural networks.
+# Debugging Neural Networks
+Numerical experiments for better understanding neural networks.
 
-Cél: közelebb hozni a gyakorlati viselkedést az elméleti modellekhez - kis autoencoder példa + részletes logolás.
+Goal: Bridge the gap between practical behavior and theoretical models - small autoencoder example + detailed logging.
 
-Telepítés:
-pip install -r requirements.txt
+Installation:
+`pip install -r requirements.txt`
 
-Konfiguráció:
-- Módosítsd az `experiments/config.yaml`-t igényeid szerint (input_dim, hidden_dims, lr, epochs, stb).
+Configuration:
+- Modify `experiments/config.yaml` according to your needs (input_dim, hidden_dims, lr, epochs, etc.).
 
-Futtatás:
-python src/train.py
+Execution:
+`python src/train.py`
 
-Eredmények:
-A runs/ mappába kerül egy időbélyegzett alkönyvtár, abban step_000000.npz fájlok.
-Ezek tartalmazzák:
-- param__<name> : súlyok / biasok
-- grad__<name> : gradiensek
-- act__<name> : aktivációk
-- loss : a mentéskori loss
+Results:
+A timestamped subdirectory will be created in the runs/ folder containing step_000000.npz files.
+These files include:
+- param__<name> : weights / biases
+- grad__<name> : gradients
+- act__<name> : activations
+- loss : loss at the time of saving
 
-Analízis:
-python src/analysis.py  # szerkeszd, add meg a run_dir-t és paramneveket
-
+Analysis:
+`python src/analysis.py`  # edit it, specify the run_dir and parameter names
