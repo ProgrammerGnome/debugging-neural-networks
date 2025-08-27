@@ -1,0 +1,17 @@
+seed: 42
+device: cpu
+dataset:
+  type: synthetic
+  n_samples: 256
+  input_dim: 16
+training:
+  epochs: 50
+  batch_size: 32
+  lr: 0.001
+  log_every_steps: 10   # per hány batch-et mentsünk
+model:
+  hidden_dims: [32, 16]   # encoder rétegek; automatikusan mirror a dekóder
+  activation: relu
+  dropout: 0.1
+save:
+  out_dir: runs/
